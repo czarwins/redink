@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RED!NK HOME PAGE</title>
+    <link rel="stylesheet" href="../main.css">
+    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700" rel="stylesheet">
+    <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="navBar">
+            <div class="navImg">
+                <a href="../index.html"> <img class="animateLeft" src="../images/redinklogo.png" alt="Red Ink Logo"
+                        height="75px" width="75px">
+                </a>
+                <h1>RED<span class="whiteSpan">!NK</span> TATTOO ARTISANS</h1>
+            </div>
+            <div class="navBarContainer ">
+                <a href="../pages/base.html" class="homeLink" data-hover="HOME">BASE</a>
+                <a href="../pages/stats.html" class="aboutLink" data-hover="ABOUT"> STATS</a>
+                <a href="../pages/looks.html" class="artwork" data-hover="ARTWORK">LOOKS</a>
+                <a href="../pages/holler.html" class="staff" data-hover="STAFF">SQUAD</a>
+                <a href="../pages/nd2kw.html" class="faqs" data-hover="FAQ'S">FACTS</a>
+            </div>
+        </div>
+
+        <div class="pageHeading animateLeft">
+            <h2><span class="frontHeading">BASE{</span><span class="backHeading">}HOME</span></h2>
+        </div>
+        <div class="baseTextDiv">
+            <div class="heading2 animateRight">
+
+                <h2 class="baseh2 baseText"><span class="redSpan">RED</span><span class="whiteSpan">!NK</span> TATTOO
+                    ARTISANS</h2>
+
+            </div>
+            <div class="homeSlideShow animateLeft baseText">
+                <img src="../images/storefront.png" alt="Storefront image" id="homeSlide" name="homeSlide" height="500px"
+                    width="700px">
+            </div>
+
+            <div id="baseTxt" class="animateRight baseText">
+                <p><span class="redSpan">RED</span> <span class="whiteSpan">!NK</span> Artisans are a diverse group of
+                    world class tattoo artists that
+                    daily <span class="redSpan">RED</span>efine the meaning of creativity.
+                    <span class="redSpan">RED</span>!NK boasts an award winning crew of master tattooists. Our parlor
+                    is a
+                    private, appointment only, tattoo studio and art gallery. We have a combined 130 years
+                    of experience in the industry and have been the leaders within our region for what feels like ages.
+                    Come see for yourself...</p>
+            </div>
+        </div>
+        <div class="modalDiv animateLeft">
+
+            <a href="#openModal" id="quoteButton">REQUEST A QUOTE</a>
+            <div id="openModal" class="modalText">
+                <div onsubmit="return checkQuoteForm()">
+                    <a href="#close" title="Close" class="close">x</a>
+                    <form name="modalForm">
+                        <h2>Submit your artwork and dimensions along with a few details and we'll give you an estimate
+                            online. We'll send you a response within 48 hours. </h2><br>
+                        <label for="name">Name:</label> <input type="text" name="name" placeholder="John Doe" size="10">
+                        <br>
+                        <label for="email">E-mail:</label> <input type="text" name="email" placeholder="example@gmail.com">
+                        <br>
+                        <label for="height">Tattoo Height (inches):</label> <input type="number" name="height" style="width: 3em"
+                            min="1" max="99">
+                        <label for="width">Tattoo Width (inches):</label><input type="number" name="width" style="width: 3em"
+                            min="1" max="99"> <br>
+                        <label for="colors">Colors:</label> <select name="colors" class="formSelect" id="colors">
+                            <option value="red">Red</option>
+                            <option value="orange">Orange</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="green">Green</option>
+                            <option value="blue">Blue</option>
+                            <option value="black"> Black</option>
+                            <option value="indigo">Indigo</option>
+                            <option value="violet">Violet</option>
+                            <option value="white">White</option>
+                        </select><br>
+                        <label for="description"></label> <textarea name="description" id="modalTextArea" cols="40"
+                            rows="10" placeholder="Description:"></textarea><br>
+                        <label for="file">Upload File:</label><input type="file" name="file"> <br>
+                        <label for="submit"></label> <input type="submit" value="Request Quote" name="submit">
+
+
+
+
+                    </form>
+                </div>
+
+
+
+
+
+
+            </div>
+
+        </div>
+        <footer class="footer ">
+            <div class="footerLinks">
+                <div class="footerItems"> <a href="../pages/careers.html">Careers</a></div> &nbsp;
+                <div class="footerItems"> <a href="../pages/reviews.html">Reviews</a></div> &nbsp;
+                <div class="footerItems"> <a href="../pages/press.html">Contact</a></div> &nbsp;
+                <!-- IMG - SOCIAL MEDIA/MULTIMEDIA LOGOS - FLATICON.COM -->
+                Follow us on Social Media: <div class="footerIcons"> <a href="https://www.facebook.com/Red-ink-tattoo-1294147273972640/"> <img src="../images/facebooklogobutton.png"
+                            alt="Facebook Link" height="25px" width="25px"></a> <a href="https://www.instagram.com/redinktattooshop/"> <img src="../images/instagramlogo.png"
+                            alt="Instagram Logo" height="25px" width="25px"></a> <a href="https://twitter.com/RedInkTattoos"> <img src="../images/twitterlogobutton.png"
+                            alt="Twitter Logo" height="25px" width="25px"></a></div>
+
+            </div>
+        </footer>
+    </div>
+
+    <script src="../app.js"></script>
+</body>
+
+</html>

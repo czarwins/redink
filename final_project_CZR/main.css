@@ -1,0 +1,598 @@
+body{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* 
+*********************
+*********************
+*********************
+Landing page style
+*/
+#indexBg{
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(images/signgif.webp);
+    /* background-position: center; */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#landingOverlay{
+    opacity: 0.5;
+    background-color: darkred;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+#landingLogo{
+    /* opacity: 0.8; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    z-index: 2;
+    flex-direction: column;
+    font-size: 30px;
+    font-family: allerta stencil;
+    
+}
+
+
+#landingLink{
+    /* opacity: 0.9; */
+    position: relative;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#autoplay{
+    display: none;
+}
+
+
+
+
+
+/* 
+*******************
+*******************
+NAVBAR STYLING
+*/
+
+.navBar{
+    display: flex;
+    justify-content: flex-end;
+    background-size: auto;
+    background-color: rgb(207, 4, 4);
+    border: solid 3px black;
+    top: 0;
+    left: 0;
+    
+}
+.navBarContainer{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    border: solid 3px black;
+    align-items: center;
+    font-family: allerta stencil;
+    font: black;
+    font-size: 25px;
+    /* line-height: 28px; */
+    text-decoration-line: overline;
+    text-decoration-color: black;
+    
+}
+.navBarContainer a{
+    color: black;
+}
+.navBarContainer a:hover{
+    color: white;
+    background-color: black;
+    padding: 2px;
+}
+.navImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 3px black;
+    padding-right: 25vh;
+    padding-left: 5vh;
+    font-family: ALLERTA STENCIl;
+
+}
+.homeLink:hover{
+    font-size: 0;
+}
+.homeLink:hover::after{
+    content: attr(data-hover);
+    font-size: 25px;
+    line-height: 28px;
+    text-align: center;
+}
+.aboutLink:hover{
+    font-size: 0;
+}
+.aboutLink:hover::after{
+    content: attr(data-hover);
+    font-size: 25px;
+    line-height: 28px;
+    text-align: center;
+}
+.artwork:hover{
+    font-size: 0;
+}
+.artwork:hover::after{
+    content: attr(data-hover);
+    font-size: 25px;
+    line-height: 28px;
+    text-align: center;
+}
+.staff:hover{
+    font-size: 0;
+}
+.staff:hover::after{
+    content: attr(data-hover);
+    font-size: 25px;
+    line-height: 28px;
+    text-align: center;
+}
+.faqs:hover{
+    font-size: 0;
+}
+.faqs:hover::after{
+    content: attr(data-hover);
+    font-size: 25px;
+    line-height: 28px;
+    text-align: center;
+}
+
+/* text next to logo in navbar */
+h1{
+    padding-left: 3vh;
+    width: 30vw;
+}
+/* parent div */
+.container{
+    top: 0;
+    left: 0;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+
+
+
+
+/* 
+*********************
+*********************
+base slideshow styling
+
+*/
+.homeSlideShow{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    /* border: solid white; */
+    padding-top: 5px;
+    animation: slideIn 4s ease;
+    
+    
+}
+#homeSlide{
+    
+    border: 1px solid white;
+}
+
+/* BASE page styling */
+.redSpan{
+    color: rgb(207, 4, 4);
+    font-weight: 700;
+}
+.baseh2{
+    color: white;
+}
+.heading2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /* align-items: flex-end; */
+    font-family: Titillium Web;
+    font-size: 35px;
+    
+}
+
+#baseTxt{
+    padding: 5px 245px 5px 245px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-family: titillium web;
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+    
+}
+/* modal styling */
+.modalText{
+	position: fixed;
+    font-family: special elite;
+    /* display:none; */
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalText:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalText div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: silver;
+    background: -o-linear-gradient(#fff, #999);
+    font-family: titillium web;
+    border: solid 1px rgb(207, 4, 4);
+ 
+}
+#quoteButton{
+    background-color: rgb(207, 4, 4);
+    font-family: allerta stencil;
+    padding-top: 50px;
+    font-size:25px;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    border: solid white;
+    padding-top: 0;
+    padding-right: 10px ;
+    padding-left: 10px;
+    text-decoration: none;
+}
+
+.modalDiv{
+    padding-top: 15px;
+    padding-bottom: 75px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+    
+    
+    
+    
+}
+.close{
+    text-decoration: none;
+    display: flex;
+    justify-content: left;
+}
+.modalDiv a{
+    color: black;
+}
+.modalDiv a:visited{
+    color: black;
+    
+}
+#modalTextArea{
+    font-family: titillium web;
+}
+
+
+
+/* heading style  */
+.pageHeading{
+    font-family: Titillium Web;
+    font-size: 30px;
+    
+    text-align: center;
+}
+.frontHeading{
+    color: black;
+    text-shadow: -1px -1px 0 rgb(207, 4, 4),
+		1px -1px 0 rgb(207, 4, 4),
+		-1px 1px 0 rgb(207, 4, 4),
+        1px 1px 0 rgb(207, 4, 4);
+}
+.backHeading{
+    color: rgb(207, 4, 4);
+    text-shadow: -1px -1px 0 #fff,
+		1px -1px 0 #fff,
+		-1px 1px 0 #fff,
+        1px 1px 0 #fff;
+        padding-right: 70%;
+}
+
+
+/* page text styling */
+.pageText{
+    font-family: titillium web;
+    color: #fff;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+}
+
+/* 
+************
+************
+STATS PAGE STYLING
+************
+************
+
+*/
+.statsTextDiv{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+.statsImgDiv{
+    display: flex;
+    justify-content: center;
+    padding: 30px 0 30px 0;
+}
+.statsImg{
+    border: 2px solid white;
+}
+
+/* looks twitter feed  */
+#twitterFeedDiv{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+
+}
+/* squad page styling */
+.squadListParent{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 400px;
+    max-width: 50vw;
+    /* text-align: center; */
+    font-family: titillium web;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.squadList{
+    color: #fff;
+    display: flex;
+    /* padding:5px; */
+    padding: 0;
+    justify-content: center;
+    margin-top: 15%;
+    
+}
+
+.squadListItem{
+    height:250px;
+    
+    font-family: titillium web;
+    
+    width: 30vw;
+    
+   
+    
+}
+.squadList:hover{
+    transform: scale(1.25);
+    box-shadow: 5px 5px 5px 5px  rgb(207, 4, 4);
+}
+
+.squadListPic{
+    height:250px;
+    
+    font-family: titillium web;
+    /* margin-top: 15%; */
+    /* width: 25vw; */
+   
+    
+}
+
+.squadListImg{
+flex: 1;
+}
+.squadListBio{
+flex: 3;
+
+text-align: center;
+padding-top: 25px;
+}
+
+
+
+.whiteSpan{
+    color: #fff;
+}
+/* FAQS PAGE STYLING */
+.faqPageText{
+    color: #fff;
+    font-family: titillium web;
+}
+/* FOOTER STYLING */
+.footer{
+    background-color: rgb(207, 4, 4);
+    width: 100vw;
+    height: 5vh;
+    color: #fff;
+    font-family: titillium web;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    border: solid 4px black;
+    margin-top: 5vh;
+    
+    
+}
+.footerLinks{
+    display: flex;
+    max-width: 40vw;
+    justify-content: space-around;
+    
+}
+.footerLinks a{
+    color: #fff;
+}
+
+.animateRight{
+    animation-name: slideLeft;
+    animation-duration: 4s;
+    transition: all 4s ease;
+    
+}
+/* ANIMATION */
+@keyframes slideLeft{
+    0%{
+        margin-left: 2500px;
+    }
+    100%{
+        margin-left: 0%;
+    }
+}
+.animateLeft{
+    animation-name: slideRight ;
+    animation-duration: 4s;
+    transition: all 4s ease;
+    
+}
+@keyframes slideRight{
+    0%{
+        margin-left: -2500px;
+    }
+    100%{
+        margin-left: 0%;
+    }
+}
+.faqPageText a{
+    color: rgb(207, 4, 4);
+}
+.careersTextDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.baseTextDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+.baseText{
+    justify-content: center;
+    width: 50vw;
+    /* height: 350px; */
+}
+.faqsDiv{
+    width: 75vw;
+    justify-content: center;
+}
+/* CONTACT PAGE STYLING */
+.contactDivItem img{
+    background-color: rgb(207, 4, 4);
+    border-radius: 10%;
+}
+.contactDivItem{
+    color: #fff;
+    font-family: titillium web;
+    font-size: 20px;
+    /* display: flex; */
+    
+    justify-content: center;
+    width: 30vw;
+    
+}
+.contactDiv{
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+
+    
+}
+.contactDivItem a{
+    color: rgb(207, 4, 4);
+}
+.reviewsDiv{
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+/* 
+IMAGE CITATIONS
+UP CLOSE ARTIST - UNSPLASH
+TATOO SIGN - UNSPLASH
+TATTED OLD MAN -UNSPLASH
+RED!NK LOGO - SELF-MADE
+STOREFRONT - BODY ELECTRIC TATOO
+WAITING AREA - SPEAKEASY CUSTOM TATTOO
+SHOP SEATING - SPEAKEASY CUSTOM TATTOO
+BACK OF SHOP -SPEAKEASY CUSTOM TATTOO
+LOVE LOGO - KISS PNG
+ARTIST AREA - RED TREE TATTOO
+OWNERS - LIMERICK POST
+SKILLS MCGEE HEADSHOT - LIMERICK POST
+STICK HENDRICKS HEADSHOT - LIMERICK POST
+TRINITY JAMES HEADSHOT - RICHMOND TATTOO AND ARTS FESTIVAL https://rvatattooarts.com/darcy-nutt/
+MOUSE MCGEE HEADSHOT - FUNHOUSE TATTOO SAN DIEGO
+TOMMY FINCH HEADSHOT - PHOENIX NEW TIMES https://www.phoenixnewtimes.com/arts/ink-masters-kyle-dunbar-sets-up-temporary-shop-at-scottsdales-old-town-ink-6568679
+SMITTY - WHAT'S ON PHNOM PENH
+RACHEL LOVELACE HEADSHOT - Speakerpedia
+SOCIAL MEDIA/MULTIMEDIA LOGOS - FLATICON.COM
+PREZI IMAGES - TWITTER FEED @TheDailyTattoos
+TRINITY JAMES PREZI IMAGE 1 - LOLWOT
+TRINITY JAMES PREZI IMAGE 2 - Tattoo.com
+
+AUDIO CITATION
+KILL BILL - ROB $TONE VIA SOUNDCLOUD
+
+VIDEO CITATION
+HOW TO MAKE TATTOO LINES - MASTER TATTOOING VIA YOUTUBE
+
+
+*/
+
+/* 
+SEMANTIC/ACCESSIBILITY SCORES
+LANDING PAGE - 79 FAILING DUE TO <HTML lang="en> element per lighthouse. 
+I have same exact declaration in each of my pages but this is the only  
+page that it fails on so I believe it may be a glitch.
+BASE - 85
+STATS - 88
+LOOKS - 83
+SQUAD - 100
+FAQS - 84
+CAREERS - 100
+REVIEWS - 100
+CONTACT - 100
+ */
